@@ -70,7 +70,7 @@ $ /usr/bin/time docker build -t mplapack:mingw -f  Dockerfile_ubuntu20.04_mingw6
 
 ```
 $ sudo port install gcc9 coreutils git ccache
-$ git clone https://github.com/nakatamaho/mplapack.git -b v0.9.1 --depth 1
+$ git clone https://github.com/nakatamaho/mplapack.git -b v0.9.3 --depth 1
 $ cd mplapack
 $ pushd mplapack/debug ; bash gen.Makefile.am.sh ; popd
 $ autoreconf --force --install ; aclocal ; autoconf ; automake; autoreconf --force --install
@@ -102,6 +102,7 @@ $ cd ; fable.cout sample.f
 ```
 
 # History
+* 2021/4/11 0.9.3 release. CentOS7 AArch64 support
 * 2021/4/6  0.9.1 release. CentOS support
 * 2021/4/1  0.9.0 release. Rename to mplapack. You must rename include files, etc. Rewrite and recompilation required.
 * 2012/12/25: MPACK 0.8.0 NVIDIA C2050 support for Rgemm in double-double, and preliminary support for Intel Xeon Phi. ANNOUNCE
