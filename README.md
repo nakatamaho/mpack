@@ -7,16 +7,17 @@ original license by LAPACK).
 # Supported platforms
 
 * Ubuntu 20.04, 18.04 (amd64, AArch64)
+* CentOS 7,8 (amd64, AArch64)
 * Ubuntu 20.04 (amd64) + Intel oneAPI
 * macOS (Intel) + macports (you may use homebrew instead, small modification of build script req'ed)
-* Windows (64bit; mingw64 and tested on Ubuntu, wine64)
+* Windows (64bit; mingw64 on Ubuntu with wine64)
 
 # Supported multiple precision libraries and floating point formats
 
-* MPFR + MPC https://www.mpfr.org/ and http://www.multiprecision.org/mpc/
-* GMP https://gmplib.org/
+* MPFR + MPC https://www.mpfr.org/ and http://www.multiprecision.org/mpc/  (arbitrary precision with IEEE like rounding mode)
+* GMP https://gmplib.org/ (arbitrary precision)
 * double (binary64)
-* DD, QD (https://www.davidhbailey.com/dhbsoftware/)
+* DD, QD (https://www.davidhbailey.com/dhbsoftware/) (DD=approx. binary64, QD=binary128)
 * _Float128 (binary128; via glibc or libquadmath; automatically detected)
 * _Float64x (extended precision of double; Intel CPU only)
 
@@ -31,7 +32,7 @@ $ cd mplapack
 $ /usr/bin/time docker build -t mplapack:ubuntu2004 -f Dockerfile_ubuntu20.04 . 2>&1 | tee log.ubuntu2004
 ```
 
-CentOS 7 (amd64)
+CentOS 7 (amd64, AArch64)
 ```
 $ git clone https://github.com/nakatamaho/mplapack/
 $ cd mplapack
